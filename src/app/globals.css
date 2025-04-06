@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+
+@theme{
+    --color-*:initial;
+
+    --color-grayh:#232828;
+    --color-black:#000000;
+    --color-graym:#313737;
+    --color-grayl:#404545;
+    --color-yellow:#FDCE01;
+    --color-black2:#0A0A0A;
+
+
+    --color-white-600: #FFFFFF;
+
+    --font-just:var(--font-just_another_hand);
+    --font-bk:var(--font-blinker);
+    --font-cabin:var(--font-cabin_condensed);
+    --font-kl:var(--font-kalam);
+    --font-kantumruy:var(--font-kantumruy_pro);
+
+    --shadow-custom: 1px 1px 2px #FDCE01;
+    --shadow-custom-button: 6px 6px 20px #000000;
+    --shadow-custom-fd: 1px 1px 5px #000000;
+
+    
+}
+  
