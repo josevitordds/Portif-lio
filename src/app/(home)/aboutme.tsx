@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { CardIcon } from "@/components/cardicon";
 import Image from "next/image";
 import { Button } from "@/components/button";
@@ -25,7 +26,12 @@ export default function AboutMe() {
             Posteriormente, aprofundei meus conhecimentos com projetos pessoais e cursos online, explorando linguagens como JavaScript, TypeScript e frameworks como React e Next.js. Amo resolver problemas com código e criar experiências interativas para web.
           </span>
         )}
-        <Button onClick={handleToggleText}> {showMore ? "Ler menos" : "Ler mais"}</Button>
+        <motion.div
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+        >
+          <Button onClick={handleToggleText}> {showMore ? "Ler menos" : "Ler mais"}</Button>
+        </motion.div>
       </div>
     </div>
   );

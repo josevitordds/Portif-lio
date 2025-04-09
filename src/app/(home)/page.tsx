@@ -1,5 +1,6 @@
 'use client';
 import { useRef } from "react";
+import { motion } from "framer-motion";
 import { CardIcon, LinkIcon } from "@/components/cardicon"
 import Image from "next/image";
 import { Button } from "@/components/button"
@@ -7,10 +8,10 @@ import imgGIT from "@/assets/1dc1681f-48c9-4036-af65-1c2331a4344b.png"
 import imgLIN from "@/assets/b1b92b2c-734d-42a0-be3f-97b92f72b2a4.png"
 import imgMES from "@/assets/58394ff3-3f88-46b2-8468-cb4245feb295.png"
 
-import AboutMe from "@/pages/aboutme";
-import Skills from "@/pages/skills";
-import Projetos from "@/pages/projetos";
-export default function Home1() {
+import AboutMe from "@/app/(home)/aboutme";
+import Skills from "@/app/(home)/skills";
+import Projetos from "@/app/(home)/projetos";
+export default function Page() {
   const sobreRef = useRef<HTMLDivElement>(null);
   const habilidadeRef = useRef<HTMLDivElement>(null);
   const projetosRef = useRef<HTMLDivElement>(null);
@@ -20,10 +21,16 @@ export default function Home1() {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+
   return (
     <>
     <div className="max-w-[1600px] mx-auto px-5 py-8 md:py-0 bg-[url(/background.png)] bg-no-repeat bg-cover bg-center md:bg-right-top">
-      <div className="h-dvh flex flex-col justify-between gap-16 relative">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}   // estado inicial
+        animate={{ opacity: 1, y: 0 }}    
+        transition={{ duration: 0.6 }}  
+       className="h-dvh flex flex-col justify-between gap-16 relative">
         <div className="flex h-full items-start justify-between py-7 max-w-[1400px] mx-auto w-full ">
           <h1 className="font-just text-yellow text-5xl px-30">Jv Dev</h1>
           <span className="flex justify-around items-center space-x-10">
@@ -47,7 +54,7 @@ export default function Home1() {
           <LinkIcon href="https://www.linkedin.com/in/josévitordiasdossantos/" imgSrc={imgLIN} alt="GitHub" />
           <LinkIcon href="https://github.com/josevitordds" imgSrc={imgMES} alt="GitHub" />
         </div>
-      </div>
+      </motion.div>
       
     </div>
     <div ref={sobreRef}><AboutMe /></div>
