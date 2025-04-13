@@ -15,7 +15,7 @@ export default function Skills() {
                 </h1>
                 <section className="h-0.5 w-25 bg-yellow -rotate-2 mb-3"></section>
             </div>
-            <div className="w-full flex justify-around items-center max-w-[1280px] mt-10">
+            <div className="w-full flex justify-around items-center max-w-[1220px] mt-10">
                 <CardSkillsIcon>
                     <Image src={imgPT} alt='sdsasd' className="w-full h-full object-contain" />
                     <span className="flex items-center justify-center mt-2 text-xl font-kantumruy text-white-600 font-medium">Python</span>
@@ -33,7 +33,7 @@ export default function Skills() {
                     <span className="flex items-center justify-center mt-2 text-xl font-kantumruy text-white-600 font-medium">React JS</span>
                 </CardSkillsIcon>
             </div>
-            <div className="w-full flex justify-around items-center max-w-[1280px] mt-10">
+            <div className="w-full flex justify-around items-center max-w-[1220px] mt-1">
                 <CardSkillsIcon>
                     <Image src={imgJV} alt='sdsasd' className="w-full h-full object-contain" />
                     <span className="flex items-center justify-center mt-2 text-xl font-kantumruy text-white-600 font-medium">JavaScript</span>

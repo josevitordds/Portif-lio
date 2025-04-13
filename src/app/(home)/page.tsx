@@ -10,11 +10,14 @@ import imgMES from "@/assets/58394ff3-3f88-46b2-8468-cb4245feb295.png"
 
 import AboutMe from "@/app/(home)/aboutme";
 import Skills from "@/app/(home)/skills";
-import Projetos from "@/app/(home)/projetos";
+import Projetos from "@/app/(home)/PROJETOS/projetos";
+import Exper from "./experiencia";
 export default function Page() {
   const sobreRef = useRef<HTMLDivElement>(null);
   const habilidadeRef = useRef<HTMLDivElement>(null);
   const projetosRef = useRef<HTMLDivElement>(null);
+  const ExperRef = useRef<HTMLDivElement>(null);
+  
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
@@ -37,7 +40,7 @@ export default function Page() {
             <span   onClick={() => scrollToSection(sobreRef)} className="font-cabin bg-white-600 rounded-2xl w-25 flex items-center justify-center shadow-custom-fd cursor-pointer transition-transform duration-300 hover:scale-102">Sobre Mim</span>
             <span onClick={() => scrollToSection(habilidadeRef)} className="font-cabin cursor-pointer transition-transform duration-300 hover:scale-102">Habilidades</span>
             <span onClick={() => scrollToSection(projetosRef)} className="font-cabin cursor-pointer transition-transform duration-300 hover:scale-102">Projetos</span>
-            <span className="font-cabin">Experiência</span>
+            <span onClick={() => scrollToSection(ExperRef)} className="font-cabin cursor-pointer transition-transform duration-300 hover:scale-102">Experiência</span>
             <span className="font-cabin">Contato</span>
           </span>
         </div>
@@ -60,6 +63,7 @@ export default function Page() {
     <div ref={sobreRef}><AboutMe /></div>
     <div ref={habilidadeRef}><Skills /></div>
     <div ref={projetosRef}><Projetos /></div>
+    <div ref={ExperRef}><Exper /></div>
     </>
   );
 }

@@ -6,7 +6,7 @@ interface CardProps extends ComponentProps<'div'> {}
 
 export function CardIcon(props: CardProps) {
     return (
-        <div className="min-w-[35px] min-h-[35px] max-w-[45px] max-h-[45px] px-2 py-2 cursor-pointer text-white-600 bg-black2 flex items-center justify-center rounded-2xl  shadow-custom transition-transform duration-300 hover:scale-105"
+        <div className="min-w-[35px] min-h-[35px] max-w-[50px] max-h-[50px] px-2 py-2 cursor-pointer text-white-600 bg-black2 flex items-center justify-center rounded-2xl  shadow-custom transition-transform duration-300 hover:scale-105"
         {...props}
         >
         </div>

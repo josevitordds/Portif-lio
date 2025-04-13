@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import SwiperProjet from "./swiperprojet";
 export default function Projetos() {
     return (
         <div className="bg-[url(/Bg5.png)] bg-no-repeat bg-cover bg-center h-dvh w-full flex justify-center flex-col">
@@ -10,7 +11,7 @@ export default function Projetos() {
                 <section className="h-0.5 w-34 bg-white-600 -rotate-2 mb-3"></section>
             </div>
             <div className="ml-60 mt-10 max-w-[1000px] h-130 bg-grayl border-b-yellow border-2 border-t-yellow rounded-xl">
-            
+             <SwiperProjet></SwiperProjet>
             </div>
         </div>
     );
